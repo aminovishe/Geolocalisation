@@ -3,7 +3,7 @@
 ![GEO](https://user-images.githubusercontent.com/45513715/57044635-1ae09a00-6c63-11e9-9a9d-68df028c1c63.png)
 
 ### Requirement :
-- Having installed IDE (VS Code & PHP extention, PHPstorm)
+- Having installed IDE (VS Code, PHPstorm, ...)
 - Having a server (WampServer)
 
 ### Launching project
