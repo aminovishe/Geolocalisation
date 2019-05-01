@@ -1,0 +1,21 @@
+.currentPosition{
+    border: 1px solid #cc9a34;
+}
+.currentPosition p{
+    color: #326767;
+}
+#currentLat, #currentLon{
+    color: black;
+}
+.w-33{
+    width: 33%;
+}
+.title{
+    color: #cc9a34;
+}
+form{
+    padding: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}

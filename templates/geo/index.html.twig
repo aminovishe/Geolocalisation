@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ controller_name }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+    <div class="mt-4">
+        <div class="row w-50 d-flex flex-row justify-content-between align-items-center m-auto text-center">
+            <img src="http://elligy.com/wp-content/uploads/2019/01/logo-Elligy-11.png" alt="logo-Elligy">
+            <h1>Géolocalisation</h1>
+            <small class="small"><a href="http://www.amin-hadrich.tk" target="_blank">Mohamed Amin Hadrich</a></small>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6 mt-4">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="text-center currentPosition mr-5 ml-5">
+                                <h3>Votre position actuelle : </h3>
+                                <p class="latLong">Latitude : <span id="currentLat"></span> |
+                                    Longitude : <span id="currentLon"></span></p>
+                            </div>
+                            <form class="mt-4 formSearch" action="" method="post">
+                                <h4 class="title">Vous cherchez : </h4>
+                                <input type="hidden" name="currentLat">
+                                <input type="hidden" name="currentLon">
+                                <div class="form-group d-flex flex-row justify-content-start align-items-center">
+                                    <label for="rayon" class="mr-2">Rayon : </label>
+                                    <input type="number" min="1" class="form-control w-33" name="radius" id="rayon"
+                                           value="1">
+                                    <select class="form-control w-33" name="unit">
+                                        <option value="km">Kilomètres (km)</option>
+                                        <option value="m">Mètres (m)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group d-flex flex-row justify-content-start align-items-center">
+                                    <label for="rayon" class="mr-2">Catégorie : </label>
+                                    <select class="form-control w-33" name="category">
+                                        <option value="restaurant">Restaurant</option>
+                                        <option value="hopital">Hôpital</option>
+                                        <option value="hotel">Hôtel</option>
+                                        <option value="cafe">Café</option>
+                                        <option value="ville">Ville</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Recherche</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-6 mt-4 results">
+                    <h4 class="title">Les localisations : </h4>
+                    <table id="table_id" class="display">
+                        <thead>
+                        <tr>
+                            <th>Adresse</th>
+                            <th>Catégorie</th>
+                            <th>Latitude</th>
+                            <th>Longitude</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for localisation in localisations %}
+                            <tr>
+                                <td>{{ localisation.locationName }}</td>
+                                <td>{{ localisation.locationCategory }}</td>
+                                <td>{{ localisation.locationLat }}</td>
+                                <td>{{ localisation.locationLon }}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
+
