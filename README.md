@@ -1,7 +1,6 @@
 # Geolocalisation - Symfony 4
-Geolocalisation - Elligy
 
-![Capture](https://user-images.githubusercontent.com/45513715/57042231-077e0080-6c5c-11e9-96fc-4f60702bd6cd.PNG)
+![GEO](https://user-images.githubusercontent.com/45513715/57044635-1ae09a00-6c63-11e9-9a9d-68df028c1c63.png)
 
 ### Requirement :
 - Having installed IDE (VS Code & PHP extention, PHPstorm)
