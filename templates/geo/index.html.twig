@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ controller_name }}{% endblock %}
+{% block title %}Géolocalisation{% endblock %}
 
 {% block stylesheets %}
     {{ parent() }}
@@ -66,7 +66,7 @@
                         {% for localisation in localisations %}
                             <tr>
                                 <td>{{ localisation.locationName }}</td>
-                                <td>{{ localisation.locationCategory }}</td>
+                                <td>{{ localisation.locationCategory | upper }}</td>
                                 <td>{{ localisation.locationLat }}</td>
                                 <td>{{ localisation.locationLon }}</td>
                             </tr>
