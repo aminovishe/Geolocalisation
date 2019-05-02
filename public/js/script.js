@@ -13,25 +13,4 @@ function geoloc() {
     };
     navigator.geolocation.getCurrentPosition(geoSuccess, geoFail);
 }
-// $('.formSearch').submit(function (event) {
-//     event.preventDefault();
-//     var Data = $('.formSearch').serialize();
-//     if (Data !== "") {
-//         $.ajax({
-//             url: "dev.php",
-//             dataType: 'JSON',
-//             type: 'post',
-//             data: Data
-//         }).done(function (result) {
-//             console.log(result);
-//             $('.results .title').html('Résultats de votre recherche :');
-//             var dataTable = $('#table_id tbody');
-//             dataTable.empty();
-//             $.each(result,function (i,elem) {
-//                 dataTable.append('<tr><td>'+elem.location_name+'</td><td>'+elem.location_category.toUpperCase()+'</td><td>'+elem.location_lat+'</td><td>'+elem.location_long+'</td></tr>')
-//             })
-//
-//         });
-//     }
-// });
 
